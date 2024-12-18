@@ -1,0 +1,26 @@
+﻿[ ]1st person Shooter
+    [X]movement
+    [ ]mouse look
+        [ ]hiding the mouse
+    [ ]health bar
+[ ]Shooting
+    [ ]bullets that shoot out from the gun(near the player)
+    [ ]there is bullet drop
+    [ ]they are stopped by walls and disappear when they hit something
+[ ]Enemies that can shoot back at you but not aimbot
+    [ ]capsules
+    [ ]little bit slower than player
+    [ ]multiple movement modes
+        [ ]random till shot at then they start shooting and walking towards the player.
+[ ]Aiming
+    [ ]more accurate
+    [ ]a little bit of bad aim when not properly aiming
+    [ ]move slower
+    [ ]hold shift
+[ ]Walls
+    [ ]maze like
+    [ ]randomly placed
+    [ ]random sizes
+    [ ]random number of walls
+[ ]esc to go to main menu
+    [ ]more like a pause menu
