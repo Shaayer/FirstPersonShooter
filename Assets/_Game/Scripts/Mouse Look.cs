@@ -17,7 +17,7 @@ public class MouseLook : MonoBehaviour
         float horizontal = Input.GetAxis("Mouse X");
         float vertical = Input.GetAxis("Mouse Y");
         yaw += horizontal;
-        pitch -= vertical;
+        //pitch -= vertical;
         Vector3 newRotation = new Vector3(pitch, yaw, roll);
         transform.localRotation = Quaternion.Euler(newRotation);
     }
