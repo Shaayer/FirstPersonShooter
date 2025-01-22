@@ -9,6 +9,8 @@ public class Mover : MonoBehaviour
     public float speed = 5.0f;
     public Transform velocityVisual;
     public Transform lookCamera;
+    public Vector3 lastStand;
+    public bool isStanding;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +21,19 @@ public class Mover : MonoBehaviour
     void Update()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
+        CapsuleCollider cc = GetComponent<CapsuleCollider>();
         Vector3 nextMove = Vector3.zero;
         nextMove.y = rb.velocity.y;
-        if (Input.GetKeyDown(KeyCode.Space))
+        isStanding = false;
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit))
+        {
+            if (hit.distance <= cc.height / 2 + 0.1)
+            {
+                isStanding = true;
+                lastStand = hit.point;
+            }
+        }
+        if (isStanding==true && Input.GetKeyDown(KeyCode.Space))
         {
             //rb.velocity = new Vector3(rb.velocity.x, jumpPower, rb.velocity.z);//Vector3.up;
             nextMove += Vector3.up * jumpPower;
