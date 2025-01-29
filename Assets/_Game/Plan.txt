@@ -1,6 +1,6 @@
 ﻿[ ]1st person Shooter
     [X]movement
-    [ ]mouse look
+    [X]mouse look
         [ ]hiding the mouse
     [ ]health bar
 [ ]Shooting
